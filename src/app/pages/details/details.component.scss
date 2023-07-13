@@ -1,0 +1,190 @@
+@import '../../../config-scss/variables.scss';
+@import '../../../config-scss/rem-calc.scss';
+@import '../../../config-scss/btn.scss';
+@import '../../../config-scss/animation.scss';
+
+
+:host {
+    main {
+        margin-top: rem-calc(40);
+
+        .pokemon__names {
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+
+            height: 75px;
+
+            padding: 0 rem-calc(30);
+
+            h1 {
+                color: var(--branco);
+                font-size: rem-calc(32);
+                text-transform: capitalize;
+            }
+
+            h2 {
+                position: absolute;
+                font-weight: 100;
+                top: 0;
+                font-size: rem-calc(60);
+                color: rgba(255, 255, 255, 0.1);
+            }
+
+            h1,
+            h2 {
+                //Remove Bug Animation
+                -webkit-animation-fill-mode: none !important;
+                animation-fill-mode: none !important;
+            }
+        }
+
+        .pokemon__status {
+            position: relative;
+
+            img {
+                position: absolute;
+                top: rem-calc(-220);
+                left: rem-calc(-40);
+                max-width: rem-calc(300);
+                z-index: 10;
+                filter: drop-shadow(1px 3px 2px rgba(0, 0, 0, 0.412));
+
+                //Remove Bug Animation
+                -webkit-animation-fill-mode: none !important;
+                animation-fill-mode: none !important;
+            }
+
+            &__statistics {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                background: var(--branco);
+
+                min-height: 43.9vh;
+                margin-top: rem-calc(10);
+
+                padding: rem-calc(110) rem-calc(35) rem-calc(30);
+                border-radius: rem-calc(50) rem-calc(50) 0 0;
+                filter: drop-shadow(rem-calc(1) rem-calc(10) rem-calc(15) rgb(0, 5, 0));
+
+                h3 {
+                    margin-bottom: rem-calc (25);
+                    font-weight: 900;
+                    font-size: rem-calc(32);
+                    color: var(--secondary-color);
+                }
+
+                ol {
+                    li {
+                        display: flex;
+                        justify-content: space-between;
+                        margin-top: rem-calc(4);
+
+                        font-size: rem-calc(18);
+                        line-height: 130%;
+                        text-transform: capitalize;
+
+                        .estatisticas {
+                            display: flex;
+
+                            .progress-bar {
+                                width: rem-calc(255);
+                                height: 20px;
+                                background-color: var(--cinza);
+                                border-radius: rem-calc(20);
+                                overflow: hidden;
+                                margin-right: rem-calc(20);
+                                display: flex;
+                                align-items: center;
+                                border: solid rem-calc(5) var(---cinza);
+
+                                .progress {
+                                    height: 100%;
+                                    background-color: var(--secondary-color);
+                                    transition: width 0.5s ease-in-out;
+                                }
+                            }
+
+                            strong{
+                                width: rem-calc(30);
+                                display: flex;
+                                justify-content: end;
+                            }
+                        }
+
+                    }
+                }
+
+                .btn {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    padding: rem-calc(20) 0;
+                    border-radius: rem-calc(10);
+                    text-decoration: none;
+                    color: var(--branco);
+                    background: var(--secondary-color);
+                    filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.267));
+                    transition: 0.5s;
+                    text-transform: uppercase;
+                    letter-spacing: rem-calc(5);
+                    font-weight: 600;
+
+
+                    &_primary {
+                        color: var(--branco);
+                        background: var(--primary-color);
+                    }
+
+                    &_secondary {
+                        color: var(--branco);
+                        background: var(--secondary-color);
+                    }
+
+                    &:hover {
+                        transition: 0.5s;
+                        background-color: #ff3056;
+                    }
+                }
+            }
+
+        }
+
+
+    }
+
+    @media (max-width: 420px) {
+        margin-top: rem-calc(10);
+
+        .pokemon__names {
+            h1 {
+                font-size: rem-calc(20);
+            }
+
+            h2 {
+                top: rem-calc(35);
+                font-size: rem-calc(20);
+            }
+        }
+
+        .pokemon__status {
+            position: relative;
+
+            img {
+                position: absolute;
+                top: rem-calc(-80);
+                left: rem-calc(0);
+                max-width: rem-calc(100);
+            }
+
+            &__statistics {
+                min-height: 57vh;
+                padding-top: rem-calc(50);
+            }
+        }
+    }
+}
