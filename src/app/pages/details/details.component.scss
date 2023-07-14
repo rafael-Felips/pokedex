@@ -164,7 +164,7 @@
                     text-transform: uppercase;
                     letter-spacing: rem-calc(5);
                     font-weight: 600;
-
+                    font-size: rem-calc(15);
 
                     &_primary {
                         color: var(--branco);
@@ -179,6 +179,7 @@
                     &:hover {
                         transition: 0.5s;
                         background-color: #ff3056;
+                        font-size: rem-calc(15.5);
                     }
                 }
             }
