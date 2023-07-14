@@ -21,7 +21,7 @@
                 font-size: rem-calc(32);
                 text-transform: capitalize;
 
-                @media (max-width: 768px) {
+                @media (max-width: 1000px) {
                     font-size: rem-calc(25);
                 }
             }
@@ -33,7 +33,7 @@
                 font-size: rem-calc(60);
                 color: rgba(255, 255, 255, 0.1);
 
-                @media (max-width: 768px) {
+                @media (max-width: 1000px) {
                     font-size: rem-calc(50);
                 }
             }
@@ -61,7 +61,7 @@
                 -webkit-animation-fill-mode: none !important;
                 animation-fill-mode: none !important;
 
-                @media (max-width: 768px) {
+                @media (max-width: 1000px) {
                     top: rem-calc(-90);
                     left: rem-calc(15);
                     max-width: rem-calc(150);
@@ -78,7 +78,7 @@
                 min-height: 43.9vh;
                 margin-top: rem-calc(10);
 
-                @media (max-width: 768px) {
+                @media (max-width: 1000px) {
                     font-size: rem-calc(25);
                     padding: rem-calc(70) rem-calc(35) rem-calc(30);
                 }
@@ -93,7 +93,7 @@
                     font-size: rem-calc(32);
                     color: var(--secondary-color);
                     
-                    @media (max-width: 768px) {
+                    @media (max-width: 1000px) {
                         margin-bottom: rem-calc(30);
                     }
                 }
@@ -108,7 +108,7 @@
                         line-height: 130%;
                         text-transform: capitalize;
 
-                        @media (max-width: 768px) {
+                        @media (max-width: 1000px) {
                             line-height: 100%;
                             margin-top: rem-calc(8);
                         }
@@ -126,9 +126,10 @@
                                 display: flex;
                                 align-items: center;
 
-                                @media (max-width: 768px) {
+                                @media (max-width: 1000px) {
                                     width: rem-calc(150);
                                     margin-right: rem-calc(5);
+                                    background-color: blue;
                                 }
 
                                 .progress {
